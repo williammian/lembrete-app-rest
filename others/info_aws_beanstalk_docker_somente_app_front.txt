@@ -45,6 +45,7 @@ Em Configuração > Software
 Colocar as propriedades de ambiente
 LEMBRETES_API_URL (url de onde está a api rodando)
 Ex: http://lembreteapidockeraws-env.eba-cjk4erib.us-east-1.elasticbeanstalk.com/api
+Ex 2: http://lembreteapidockeraws-env.eba-cjk4erib.us-east-1.elasticbeanstalk.com:8082/api
 
 Liberar porta 80 como regra de entrada no Security Group da EC2 do app/front
 
