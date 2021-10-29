@@ -1,0 +1,46 @@
+Deploy Angular App - projeto front-end
+
+(desenvolvimento)
+ng build  --base-href=/lembrete/
+
+(producao)
+ng build --prod --base-href=/lembrete/
+
+ou 
+
+ng build --prod
+
+---------------------------------------------
+
+Pegar os arquivos da pasta dist/lembrete-app
+
+Ir na pasta do tomcat
+Pasta webapps
+Criar uma pasta lembrete
+Colocar os arquivos nesta pasta
+
+no browser
+localhost:8080/lembrete/
+
+ou colocar arquivos na pasta ROOT
+
+localhost:8080/
+
+---------------------------------------------
+
+Pegar os arquivos da pasta dist/lembrete-app
+
+Ir na pasta do Nginx
+Pasta html
+Criar uma pasta lembrete
+Colocar os arquivos nesta pasta
+
+no browser
+localhost/lembrete
+
+ou colocar arquivos na pasta html
+
+localhost/
+
+----------------------------------------------
+

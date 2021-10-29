@@ -1,0 +1,57 @@
+Criar imagem docker
+
+docker build -t "williammian/lembrete-app:v2-prod" .
+
+-----------------------------------------------------------
+
+Enviar imagem para o Docker Hub
+
+docker login
+
+username
+password
+
+docker push williammian/lembrete-app:v2-prod
+
+-----------------------------------------------------------
+
+Criar arquivo Dockerrun.aws.json
+
+{
+  "AWSEBDockerrunVersion": "1",
+    "Image": {
+      "Name": "williammian/lembrete-app:v2-prod",
+      "Update": "true"
+    },
+   "Ports": [
+     {
+       "ContainerPort": 80,
+       "HostPort": 80
+     }
+   ]
+}
+
+---------------------------------------------------------
+
+Criar ambiente no Elastic Beanstalk
+
+lembrete-app-docker
+
+Docker
+
+Subir arquivo Dockerrun.aws.json
+
+Em Configuração > Software
+Colocar as propriedades de ambiente
+LEMBRETES_API_URL (url de onde está a api rodando)
+Ex: http://lembreteapidockeraws-env.eba-cjk4erib.us-east-1.elasticbeanstalk.com/api
+
+Liberar porta 80 como regra de entrada no Security Group da EC2 do app/front
+
+----------------------------------------------------------
+
+Teste browser
+
+http://lembreteappdockeraws-env.eba-cjk4erib.us-east-1.elasticbeanstalk.com
+
+----------------------------------------------------------

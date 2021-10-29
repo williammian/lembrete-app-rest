@@ -1,0 +1,26 @@
+Em modo desenvolvimento (no Visual Studio)
+
+em assets/env
+
+alterar arquivo env.js
+
+window["env"]["lembretesApiUrl"] = "http://localhost:8081/api";
+
+---------------------------------------------------------------
+
+Manualmente em produção
+
+Ir na pasta no servidor web onde estão os arquivos do projeto
+
+em assets/env
+
+window["env"]["lembretesApiUrl"] = "http://localhost:8081/api";
+
+---------------------------------------------------------------
+
+Rodando docker Manualmente
+
+docker run -p 80:80 --env LEMBRETES_API_URL="http://localhost:8081/api" lembrete-app:v2-prod
+
+----------------------------------------------------------------
+

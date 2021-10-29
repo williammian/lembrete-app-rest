@@ -1,0 +1,6 @@
+//gerando imagem docker da api
+//executar o comando dentro da pasta onde se encontra o Dockerfile
+docker build -t lembrete-app:v2-prod .
+
+//rodando imagem do app com docker
+docker run -p 80:80 --env LEMBRETES_API_URL="http://localhost:8081/api" lembrete-app:v2-prod
